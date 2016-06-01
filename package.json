@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-watch": "^4.3.6",
+    "laravel-elixir": "*"
+  }
+}

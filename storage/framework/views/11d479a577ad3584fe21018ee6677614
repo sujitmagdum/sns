@@ -1,0 +1,90 @@
+<?php $__env->startSection('page_heading','Documentation'); ?>
+
+<?php $__env->startSection('section'); ?>
+
+		<?php $__env->startSection('dpanel_panel_title', 'Panel'); ?>
+		<?php $__env->startSection('dpanel_panel_body'); ?>
+			<?php $__env->startSection('inside_panel_title', 'Default title'); ?>
+			<?php $__env->startSection('inside_panel_body'); ?>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			<?php $__env->stopSection(); ?>
+			<?php echo $__env->make('widgets.panel', array('header'=>true, 'as'=>'inside'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php $__env->stopSection(); ?>	
+		<?php $__env->startSection('dpanel_panel_footer'); ?>
+<pre class="codeWrapper">
+<i class="fa fa-at"></i>section ('inside_panel_title', 'Default title')
+<i class="fa fa-at"></i>section ('inside_panel_body')
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+<i class="fa fa-at"></i>endsection
+<i class="fa fa-at"></i>include('widgets.panel', array('header'=>true, 'as'=>'inside'))
+</pre>
+		<?php $__env->stopSection(); ?>
+		<?php echo $__env->make('widgets.panel', array('class'=>'primary', 'header'=>true, 'footer'=>true, 'as'=>'dpanel'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+		
+		<?php $__env->startSection('dcollapsible_panel_title', 'Collapssible'); ?>
+		<?php $__env->startSection('dcollapsible_panel_body'); ?>
+			<?php echo $__env->make('widgets.collapse', array('id'=>'2', 'header'=> 'This is a header', 'body'=>'Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php $__env->stopSection(); ?>	
+		<?php $__env->startSection('dcollapsible_panel_footer'); ?>
+<pre class="codeWrapper">
+<i class="fa fa-at"></i>include('widgets.collapse', array('id'=>'2', 'header'=> 'This is a header', 'body'=>'Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.'))
+</pre>
+		<?php $__env->stopSection(); ?>
+		<?php echo $__env->make('widgets.panel', array('class'=>'primary', 'header'=>true, 'footer'=>true, 'as'=>'dcollapsible'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		
+
+		<?php $__env->startSection('dbutton_panel_title', 'Button'); ?>
+		<?php $__env->startSection('dbutton_panel_body'); ?>
+			<?php echo $__env->make('widgets.button', array('value'=>'Info button', 'class'=>'info'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php echo $__env->make('widgets.button', array('class'=>'danger', 'size'=>'lg', 'value'=>'Large Button'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php echo $__env->make('widgets.button', array('class'=>'success btn-outline', 'value'=>'Primary'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php $__env->stopSection(); ?>	
+		<?php $__env->startSection('dbutton_panel_footer'); ?>
+<pre class="codeWrapper">
+<i class="fa fa-at"></i>include('widgets.button', array('value'=>'Info button', 'class'=>'info'))
+<i class="fa fa-at"></i>include('widgets.button', array('class'=>'danger', 'size'=>'lg', 'value'=>'Large Button'))
+<i class="fa fa-at"></i>include('widgets.button', array('class'=>'success btn-outline', 'value'=>'Primary'))
+</pre>
+		<?php $__env->stopSection(); ?>
+		<?php echo $__env->make('widgets.panel', array('class'=>'primary', 'header'=>true, 'footer'=>true, 'as'=>'dbutton'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		
+
+
+		<?php $__env->startSection('doalert_panel_title', 'Alerts'); ?>
+		<?php $__env->startSection('doalert_panel_body'); ?>
+			<?php echo $__env->make('widgets.alert', array('class'=>'success', 'message'=> 'You have an alert', 'icon'=> 'user'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php echo $__env->make('widgets.alert', array('class'=>'info', 'dismissable'=>true, 'message'=> 'My message'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php $__env->stopSection(); ?>	
+		<?php $__env->startSection('doalert_panel_footer'); ?>
+<pre class="codeWrapper">
+<i class="fa fa-at"></i>include('widgets.alert', array('class'=>'success', 'message'=> 'You have an alert', 'icon'=> 'user'))
+<i class="fa fa-at"></i>include('widgets.alert', array('class'=>'info', 'dismissable'=>true, 'message'=> 'My message'))
+</pre>
+		<?php $__env->stopSection(); ?>
+		<?php echo $__env->make('widgets.panel', array('class'=>'primary', 'header'=>true, 'footer'=>true, 'as'=>'doalert'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		
+
+		<?php $__env->startSection('dprogress_panel_title', 'Progressbars'); ?>
+		<?php $__env->startSection('dprogress_panel_body'); ?>
+			<?php echo $__env->make('widgets.progress', array('class'=> 'success', 'value'=>'44'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php echo $__env->make('widgets.progress', array('animated'=> true, 'value'=>'72'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php echo $__env->make('widgets.progress', array('class'=> 'danger', 'value'=>'12', 'badge'=>true), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php $__env->stopSection(); ?>	
+		<?php $__env->startSection('dprogress_panel_footer'); ?>
+<pre class="codeWrapper">
+<i class="fa fa-at"></i>include('widgets.progress', array('class'=> 'success', 'value'=>'44'))
+<i class="fa fa-at"></i>include('widgets.progress', array('animated'=> true, 'value'=>'72'))
+<i class="fa fa-at"></i>include('widgets.progress', array('class'=> 'danger', 'value'=>'12', 'badge'=>true))
+</pre>
+		<?php $__env->stopSection(); ?>
+		<?php echo $__env->make('widgets.panel', array('class'=>'primary', 'header'=>true, 'footer'=>true, 'as'=>'dprogress'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+	
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

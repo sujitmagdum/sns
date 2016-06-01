@@ -1,0 +1,38 @@
+<?php $__env->startSection('page_heading','Charts'); ?>
+<?php $__env->startSection('section'); ?>
+<div class="col-sm-12">	
+	<div class="row">
+		<div class="col-sm-6">
+			<?php $__env->startSection('cchart1_panel_title','Line Chart'); ?>
+			<?php $__env->startSection('cchart1_panel_body'); ?>
+			<?php echo $__env->make('widgets.charts.clinechart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php $__env->stopSection(); ?>
+			<?php echo $__env->make('widgets.panel', array('header'=>true, 'as'=>'cchart1'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+			<?php $__env->startSection('cchart3_panel_title','Donut Chart'); ?>
+			<?php $__env->startSection('cchart3_panel_body'); ?>
+				<div style="max-width:400px; margin:0 auto;"><?php echo $__env->make('widgets.charts.cdonutchart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></div>
+			<?php $__env->stopSection(); ?>
+			<?php echo $__env->make('widgets.panel', array('header'=>true, 'as'=>'cchart3'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+		<div class="col-sm-6">
+			
+			<?php $__env->startSection('cchart2_panel_title','Pie Chart'); ?>
+			<?php $__env->startSection('cchart2_panel_body'); ?>
+				<div style="max-width:400px; margin:0 auto;"><?php echo $__env->make('widgets.charts.cpiechart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></div>
+			<?php $__env->stopSection(); ?>
+			<?php echo $__env->make('widgets.panel', array('header'=>true, 'as'=>'cchart2'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+			<?php $__env->startSection('cchart4_panel_title','Bar Chart'); ?>
+			<?php $__env->startSection('cchart4_panel_body'); ?>
+			<?php echo $__env->make('widgets.charts.cbarchart', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php $__env->stopSection(); ?>
+			<?php echo $__env->make('widgets.panel', array('header'=>true, 'as'=>'cchart4'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div> 
+	</div>
+	
+	
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
